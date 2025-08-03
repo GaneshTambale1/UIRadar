@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "python3 -m http.server 3000",
+    "dev": "npx http-server . -p 3000",
     "build": "echo 'No build process configured yet'",
-    "start": "python3 -m http.server 3000"
+    "start": "npx http-server . -p 3000"
   },
   "keywords": [],
   "author": "",
