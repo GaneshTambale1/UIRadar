@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "echo 'No dev server configured yet'",
+    "dev": "python3 -m http.server 3000",
     "build": "echo 'No build process configured yet'",
-    "start": "echo 'No start script configured yet'"
+    "start": "python3 -m http.server 3000"
   },
   "keywords": [],
   "author": "",
