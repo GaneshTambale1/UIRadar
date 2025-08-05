@@ -1,0 +1,206 @@
+.report-generator {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.report-header {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.report-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 16px;
+}
+
+.report-header p {
+  font-size: 1.125rem;
+  color: #64748b;
+}
+
+.report-config {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.config-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+.config-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 24px;
+}
+
+.config-options,
+.format-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.config-option,
+.format-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.config-option:hover,
+.format-option:hover {
+  background: #f8fafc;
+}
+
+.config-option input[type="checkbox"],
+.format-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3b82f6;
+}
+
+.checkmark,
+.radio-mark {
+  position: relative;
+}
+
+.config-option span:not(.checkmark),
+.format-option span:not(.radio-mark) {
+  font-weight: 500;
+  color: #374151;
+}
+
+.report-preview {
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.report-preview h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.preview-container {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+.preview-page {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 300px;
+}
+
+.preview-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.preview-header h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 8px;
+}
+
+.preview-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.preview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preview-section {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.preview-section h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.report-actions {
+  text-align: center;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.generate-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.generate-btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .report-config {
+    grid-template-columns: 1fr;
+  }
+
+  .report-header h1 {
+    font-size: 2rem;
+  }
+
+  .config-section,
+  .preview-container {
+    padding: 24px;
+  }
+}
